@@ -14,6 +14,6 @@ async def admin_enter():
 async def user_enter(user_id: int):
     return {"message":  f"Вы вошли как пользователь №{user_id}"}
 
-@app.get("/user/{username}/{age}")
-async def user_enter(username: str, age: int):
-    return {"message": f"Информация о пользователе. Имя: {username}, возраст: {age}"}
+@app.get("/user")  # исправил
+async def user_info(username: str, age: int):
+    return f"Информация о пользователе. Имя: {username}, Возраст: {age}"  # и да тут зачем-то словарь стоял
