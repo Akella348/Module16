@@ -4,11 +4,11 @@ app = FastAPI()
 
 @app.get("/")
 async def home_page():
-    return "Главная страница"
+    return f"Главная страница"
 
 @app.get("/user/admin")
 async def admin_enter():
-    return "Вы вошли как администратор"
+    return f"Вы вошли как администратор"
 
 @app.get("/user/{user_id}")
 async def user_enter(user_id: int):
